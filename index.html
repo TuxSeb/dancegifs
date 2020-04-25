@@ -1,14 +1,38 @@
-<!DOCTYPE HTML> 
-
 <html>
+    <head>
+        <title>
+            Salsa Gifs
+        </title>
+        <link rel="icon" type="image/gif" href="./ressources/image/favicon/favicon.ico" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <style>
 
-<head>
-<title> SalsaGifs </title>
+            @font-face {
+                font-family: "SalsaFont";
+                src: url('./ressources/fonts/Salsa-Regular.ttf') format('truetype');
+                }
 
-</head>
+                .salsafont {
+                font-family: "SalsaFont", sans-serif;
+                }
 
-<body>
+        </style>
 
-<h1>Welcome on SalsaGifs!  </h1> 
+        <script> 
+            $(document).ready(function(){
+                
+                $("#header").load("header.txt"); 
+                
+            });
+        </script> 
 
-</body>
+    </head>
+
+    <body>
+        <div  class="salsafont" id="header"></div>
+        <!--Remaining section-->
+        <div id="footer"></div>
+    </body>
+</html>
+
+
