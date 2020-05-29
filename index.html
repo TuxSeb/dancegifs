@@ -1,10 +1,20 @@
 <html>
     <head>
         <title>
-            Salsa Gifs
+            DanceGifs
         </title>
         <link rel="icon" type="image/gif" href="./ressources/image/favicon/favicon.ico" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+       
+        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
+
         <style>
 
             @font-face {
@@ -16,22 +26,64 @@
                 font-family: "SalsaFont", sans-serif;
                 }
 
+                .bg
+                {
+                    position: relative;
+                    z-index: 1;
+                }
+                
+                .bg::before
+                {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: url('https://media1.tenor.com/images/289eb54806d2672ef7252c61cd361c00/tenor.gif?itemid=5710264') center center; 
+                opacity: 0.5;
+                background-repeat: no-repeat;
+                background-size: cover;
+                }
+           
+
         </style>
 
-        <script> 
-            $(document).ready(function(){
-                
-                $("#header").load("header.txt"); 
-                
-            });
-        </script> 
 
     </head>
 
     <body>
-        <div  class="salsafont" id="header"></div>
-        <!--Remaining section-->
-        <div id="footer"></div>
+        
+        <div class="bg">
+
+        
+
+        <div class="container h-100 d-flex justify-content-center">
+            <div class="jumbotron my-auto text-white" style="background-color: #af2626;">
+                <h1 id="app" class="text-center align-middle salsafont"> </h1>
+            </div>
+         </div>
+
+        </div> 
+            
+
+        <script> 
+
+            var app = document.getElementById('app' );
+
+            var typewriter = new Typewriter(app, {
+                loop: true
+            });
+
+            typewriter.typeString('Coming soon... 💃 🕺')
+                .pauseFor(2500)
+                .deleteAll()
+                .pauseFor(2000)
+                .start();
+
+        </script>    
+
     </body>
 </html>
 
