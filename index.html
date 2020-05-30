@@ -76,10 +76,19 @@
                 loop: true
             });
 
-            typewriter.typeString('Coming soon... 💃 🕺')
+            typewriter.typeString('Coming soon... ')
+                .pauseFor(500)
+                .pasteString('💃')
+                .pauseFor(500)
+                .pasteString('🕺')
                 .pauseFor(2500)
                 .deleteAll()
                 .pauseFor(2000)
+                .typeString('Wanna learn Salsa ?')
+                .pauseFor(2000)
+                .deleteAll() 
+                .typeString('or Tango ?')
+                .pauseFor(2500)
                 .start();
 
         </script>    
