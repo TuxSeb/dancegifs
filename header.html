@@ -1,0 +1,131 @@
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    
+    <base href="http://localhost/dancegifs_backup/" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <nav class="navbar fixed-top navbar-expand-sm navbar-dark" style="background-color: #af2626;">
+   
+    <a class="navbar-brand " href="index.html">
+        <img  src="ressources/image/favicon/favicon-32x32.png" alt="danceGifs" style="width:40px;">  danceGifs
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="salsafont mr-auto navbar-nav">
+      <li class="salsafont nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Salsa  
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="salsa/salsa_index.html#salsa_basic">Basic moves</a>
+            <a class="dropdown-item" href="salsa/salsa_index.html#salsa_beginner">Beginner Moves</a> 
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="playlist.html#salsa_playlist">My salsa playlist</a>
+          </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="salsafont nav-link text-white" href="#">Rock</a>
+      </li>
+      <li class="nav-item">
+        <a class="salsafont nav-link text-white" href="#">Tango</a>
+      </li>
+     
+    </ul>
+
+    <ul class="navbar-nav my-2 my-lg-0">
+        <li class="nav-item">
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-dark active">
+              <input type="radio" name="options" id="option1" autocomplete="off" checked> Dark 
+            </label>
+            <label class="btn btn-light">
+              <input type="radio" name="options" id="option2" autocomplete="off"> Light
+            </label>
+          </div>
+
+        </li>
+
+        <li class="nav-item">
+          <a class="salsafont nav-link text-white" href="./info/about_project.html">Contribute</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="salsafont nav-link text-white" href="./info/about_project.html#contact">Contact</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="salsafont nav-link text-white" href="./info/about_project.html#about_project">About project</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="salsafont nav-link text-white" href="./info/about_project.html#about_me">About me</a>
+        </li>
+    </ul>
+
+
+</div> 
+
+  </nav>
+
+  <script> 
+  
+  $( document ).ready(function() {
+    var cook = Cookies.get('darktheme'); 
+    if(cook)
+    {
+      $("body").css("background-color", "black");
+      $(".darktone" ).css("color", "white");
+      $("hr" ).css("border-top", "1px solid white");
+    }
+    else
+    {
+      $("body").css("background-color", "white");
+      $( ".darktone" ).css("color", "black");
+      $( ".darktone" ).css("opacity", "0.9");
+      $("hr" ).css("border-top", "1px solid rgba(0, 0, 0, 0.1)");
+    }
+  });
+  
+    $( "#option1").click(function() {
+    $("body").css("background-color", "black");
+    $(".darktone" ).css("color", "white");
+    $("hr" ).css("border-top", "1px solid white");
+    $( ".darktone" ).css("opacity", "1");
+    Cookies.set('darktheme', true, { expires: 1 }, { path: '' })
+    
+  });
+
+  $( "#option2").click(function() {
+    $("body").css("background-color", "white");
+    $( ".darktone" ).css({"color":"black", "opacity":90});
+    $("hr" ).css("border-top", "1px solid rgba(0, 0, 0, 0.1)");
+    Cookies.set('darktheme', false , { expires: 1 }, { path: '' })
+    
+    
+  });
+
+  
+     
+
+    
+  </script> 
+
+
+
+
